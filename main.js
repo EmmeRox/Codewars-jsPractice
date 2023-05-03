@@ -225,8 +225,14 @@ function descendingOrder(n) {
 //Your job is to implement a function which returns the last D digits of an integer N as a list.
 
 function lastDigit(n, d) {
-  let newArr = n.split("");
-  console.log(newArr);
+  if (d <= 0) {
+    return [];
+  } else {
+    let arr = String(n).split("");
+    let newArr = arr.slice(-d);
+    newArr = newArr.map(Number);
+    return newArr;
+  }
 }
 
 console.log(lastDigit(123767, 4));
