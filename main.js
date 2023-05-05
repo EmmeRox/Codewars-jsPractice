@@ -1,7 +1,7 @@
 // *Variables*
 // Create a variable and console log the value
 let thisVar = 23;
-console.log(thisVar);
+//console.log(thisVar);
 // Create a variable, add 10 to it, and alert the value
 let otherVar = 10;
 otherVar += 10;
@@ -42,7 +42,7 @@ function multThree(x, y, z) {
   }
 }
 
-multThree(2, 2, 4);
+//multThree(2, 2, 4);
 //*Loops*
 //Create a function that takes in a word and a number. Console log the word x times where x was the number passed in
 function myFunc(word, x) {
@@ -51,7 +51,7 @@ function myFunc(word, x) {
   }
 }
 
-myFunc("hiya", 10);
+//myFunc("hiya", 10);
 
 // function digitize(n) {
 //   let newArr = [];
@@ -88,7 +88,7 @@ function highAndLow2(numbers) {
 
 //Above two functions do the exact same
 
-highAndLow("1 2 3 4 5");
+//highAndLow("1 2 3 4 5");
 
 //Below to remove first and alst character of a string. slice(1, -1) would have worked.
 function removeChar(str) {
@@ -172,7 +172,7 @@ function squareDigits(num) {
   return concat;
 }
 
-console.log(squareDigits(2112));
+//console.log(squareDigits(2112));
 
 //Given a string, write a function that counts how many vowels (a, e, i, o, or u) that string contains
 function getCount(str) {
@@ -192,7 +192,7 @@ function getCount(str) {
   return Number(count);
 }
 
-console.log(getCount("halloween"));
+//console.log(getCount("halloween"));
 
 // Another(cleaner) way of doing above
 //function getCount(str) {
@@ -235,4 +235,17 @@ function lastDigit(n, d) {
   }
 }
 
-console.log(lastDigit(123767, 4));
+//console.log(lastDigit(123767, 4));
+
+//Given a string, return shortesst word
+
+function findShort(s) {
+  let arr = s.split(" ");
+  let short = arr.reduce(
+    (acc, curr) => (acc && acc.length <= curr.length ? acc : curr),
+    ""
+  );
+  return short;
+}
+
+console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
