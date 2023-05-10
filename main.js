@@ -248,4 +248,32 @@ function findShort(s) {
   return short;
 }
 
-console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
+//console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
+
+//Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
+
+// function XO(str) {
+//   let string = str.split("");
+//   let x = string.filter((letter) => letter.toLowerCase().includes("x"));
+//   let o = string.filter((letter) => letter.includes("o"));
+//   if (x.length == o.length || !string.includes("x") || !string.includes("o")) {
+//     return true;
+//   } else {
+//     return false;
+//   }
+// }
+
+function XO(str) {
+  let compare = 0;
+  str.split("").forEach((curr) => {
+    if ("x" === curr.toLowerCase()) {
+      compare += 1;
+    }
+    if ("o" === curr.toLowerCase()) {
+      compare -= 1;
+    }
+  });
+  return compare === 0;
+}
+
+console.log(XO("fwsox"));
