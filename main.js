@@ -251,7 +251,7 @@ function findShort(s) {
 //console.log(findShort("bitcoin take over the world maybe who knows perhaps"));
 
 //Check to see if a string has the same amount of 'x's and 'o's. The method must return a boolean and be case insensitive. The string can contain any char.
-
+//My solution
 // function XO(str) {
 //   let string = str.split("");
 //   let x = string.filter((letter) => letter.toLowerCase().includes("x"));
@@ -262,7 +262,7 @@ function findShort(s) {
 //     return false;
 //   }
 // }
-
+//Online solution
 function XO(str) {
   let compare = 0;
   str.split("").forEach((curr) => {
@@ -276,4 +276,20 @@ function XO(str) {
   return compare === 0;
 }
 
-console.log(XO("fwsox"));
+//console.log(XO("fwsox"));
+
+//Make a program that filters a list of strings and returns a list with only your friends name in it.
+
+//If a name has exactly 4 letters in it, you can be sure that it has to be a friend of yours!
+
+function friend(friends) {
+  let myFriends = [];
+  for (const friend of friends) {
+    if (friend.length === 4) {
+      myFriends.push(friend);
+    }
+  }
+  return myFriends;
+}
+
+console.log(friend(["Ryan", "Kieran", "Mark"]));
