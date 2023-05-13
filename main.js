@@ -293,3 +293,26 @@ function friend(friends) {
 }
 
 console.log(friend(["Ryan", "Kieran", "Mark"]));
+
+//Implement a function that adds two numbers together and returns their sum in binary. The conversion can be done before, or after the addition.
+
+//The binary number returned should be a string.
+//Continue working on below:
+function addBinary(a, b) {
+  let values = [],
+    i = a.length - 1,
+    j = b.length - 1,
+    carry = 0;
+
+  while (i >= 0 || j >= 0 || carry) {
+    carry += (+a[i] || 0) + (+b[j] || 0);
+    values.unshift(carry % 2);
+    carry >>= 1; // or Math.floor(carry / 2)
+    i--;
+    j--;
+  }
+  console.log(values);
+  return values.join("");
+}
+
+console.log(addBinary(6, 2));
