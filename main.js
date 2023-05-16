@@ -315,4 +315,15 @@ function addBinary(a, b) {
   return values.join("");
 }
 
-console.log(addBinary(6, 2));
+//console.log(addBinary(6, 2));
+
+function sumTwoSmallestNumbers(numbers) {
+  let arr = numbers.sort((a, b) => a - b);
+  let num1 = arr[0];
+  let num2 = arr[1];
+  return num1 + num2;
+}
+
+console.log(sumTwoSmallestNumbers([[5, 12, 8, 19, 22]]));
+
+// Above submitted and passed despite vs error codes
