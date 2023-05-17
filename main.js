@@ -324,6 +324,25 @@ function sumTwoSmallestNumbers(numbers) {
   return num1 + num2;
 }
 
-console.log(sumTwoSmallestNumbers([[5, 12, 8, 19, 22]]));
+//console.log(sumTwoSmallestNumbers([[5, 12, 8, 19, 22]]));
 
 // Above submitted and passed despite vs error codes
+
+//How many people still on the bus after ['gets on', 'gets off]
+const number = function (busStops) {
+  let remaining = 0;
+  for (let i = 0; i < busStops.length; i++) {
+    let peopleOnBus = busStops[i].shift();
+    let getOff = busStops[i].pop();
+    remaining += peopleOnBus - getOff;
+  }
+  return remaining;
+};
+
+console.log(
+  number([
+    [10, 0],
+    [3, 5],
+    [5, 8],
+  ])
+);
