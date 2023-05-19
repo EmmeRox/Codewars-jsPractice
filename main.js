@@ -236,3 +236,19 @@ function lastDigit(n, d) {
 }
 
 console.log(lastDigit(123767, 4));
+
+function longest(s1, s2) {
+  let first = s1.split('');
+  let second = s2.split('');
+  let long = new Set([...s1, ...s2]);
+  let sorted = Array.from(long).sort();
+  
+  for (let j = 0; j < second.length; j++) {
+    long.add(second[j]);
+  }
+  for (let i = 0; i < first.length; i++) {
+    long.add(first[i]);
+    }
+
+  return sorted.join('');
+  }
