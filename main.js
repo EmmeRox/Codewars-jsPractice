@@ -235,20 +235,55 @@ function lastDigit(n, d) {
   }
 }
 
-console.log(lastDigit(123767, 4));
+//console.log(lastDigit(123767, 4));
 
 function longest(s1, s2) {
-  let first = s1.split('');
-  let second = s2.split('');
+  let first = s1.split("");
+  let second = s2.split("");
   let long = new Set([...s1, ...s2]);
   let sorted = Array.from(long).sort();
-  
+
   for (let j = 0; j < second.length; j++) {
     long.add(second[j]);
   }
   for (let i = 0; i < first.length; i++) {
     long.add(first[i]);
+  }
+
+  return sorted.join("");
+}
+
+//How many people still on the bus after ['gets on', 'gets off]
+const number = function (busStops) {
+  let remaining = 0;
+  for (let i = 0; i < busStops.length; i++) {
+    let peopleOnBus = busStops[i].shift();
+    let getOff = busStops[i].pop();
+    remaining += peopleOnBus - getOff;
+  }
+  return remaining;
+};
+
+function removeSmallest(numbers) {
+  if (numbers.length !== 0) {
+    let compare = numbers[0];
+    let lowIndex = 0;
+
+    for (let i = 0; i < numbers.length; i++) {
+      if (numbers[i] < compare) {
+        compare = numbers[i];
+        lowIndex = i;
+      }
     }
 
-  return sorted.join('');
+    const newArr = [
+      ...numbers.slice(0, lowIndex),
+      ...numbers.slice(lowIndex + 1),
+    ];
+    return newArr;
+  } else {
+    return [];
   }
+}
+
+console.log(removeSmallest([5, 2, 3, 4, 1]));
