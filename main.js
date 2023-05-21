@@ -286,4 +286,11 @@ function removeSmallest(numbers) {
   }
 }
 
-console.log(removeSmallest([5, 2, 3, 4, 1]));
+//console.log(removeSmallest([5, 2, 3, 4, 1]));
+
+function filter_list(l) {
+  let numbersOnly = l.filter((el) => typeof el === "number");
+  return numbersOnly;
+}
+
+console.log(filter_list([1, 2, "a", "b"]));
