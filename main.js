@@ -293,4 +293,29 @@ function filter_list(l) {
   return numbersOnly;
 }
 
-console.log(filter_list([1, 2, "a", "b"]));
+//console.log(filter_list([1, 2, "a", "b"]));
+
+//You have a list of integers. The task is to return the maximum sum of the elements located between two negative elements. 
+
+function maxSumBetweenTwoNegatives(a) {
+  let sum = 0;
+  let maxSum = -1;
+  let negative = false;
+
+  for (let i = 0; i < a.length; i++) {
+    if (a[i] < 0) {
+      if (negative && sum > maxSum) {
+        maxSum = sum;
+      }
+      sum = 0;
+      negative = true;
+  } else {
+    sum += a[i];
+  }
+}
+
+return maxSum === -1 ? -1 : maxSum;
+
+}
+console.log(maxSumBetweenTwoNegatives([-1,6,-2,3,5,-7]));
+console.log(maxSumBetweenTwoNegatives(-1, 2))
