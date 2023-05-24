@@ -295,7 +295,7 @@ function filter_list(l) {
 
 //console.log(filter_list([1, 2, "a", "b"]));
 
-//You have a list of integers. The task is to return the maximum sum of the elements located between two negative elements. 
+//You have a list of integers. The task is to return the maximum sum of the elements located between two negative elements.
 
 function maxSumBetweenTwoNegatives(a) {
   let sum = 0;
@@ -309,13 +309,26 @@ function maxSumBetweenTwoNegatives(a) {
       }
       sum = 0;
       negative = true;
-  } else {
-    sum += a[i];
+    } else {
+      sum += a[i];
+    }
   }
+
+  return maxSum === -1 ? -1 : maxSum;
+}
+//console.log(maxSumBetweenTwoNegatives([-1,6,-2,3,5,-7]));
+//console.log(maxSumBetweenTwoNegatives(-1, 2))
+
+//Write a function that removes the spaces from the values and returns an array showing the space decreasing
+
+function spacey(array) {
+  let newArr = [];
+  let word = "";
+  for (let i = 0; i < array.length; i++) {
+    word = word + array[i];
+    newArr.push(word);
+  }
+  return newArr;
 }
 
-return maxSum === -1 ? -1 : maxSum;
-
-}
-console.log(maxSumBetweenTwoNegatives([-1,6,-2,3,5,-7]));
-console.log(maxSumBetweenTwoNegatives(-1, 2))
+console.log(spacey(["kevin", "has", "no", "space"]));
