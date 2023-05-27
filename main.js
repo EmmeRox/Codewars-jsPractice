@@ -337,18 +337,33 @@ function spacey(array) {
 
 function likes(names) {
   if (names.length === 0) {
-    return `no one likes this`
+    return `no one likes this`;
   } else if (names.length === 1) {
-    return `${names} likes this`
+    return `${names[0]} likes this`;
   } else if (names.length === 2) {
-    return `${names[0]} and ${names[1]} like this`
+    return `${names[0]} and ${names[1]} like this`;
   } else if (names.length === 3) {
-    return `${names[0]}, ${names[1]} and ${names[2]} like this`
+    return `${names[0]}, ${names[1]} and ${names[2]} like this`;
   } else {
-    return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`
+    return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
   }
-  console.log(names.length)
+  console.log(names.length);
 }
 
-console.log(likes(['Jacob', 'Alex', 'Joe', 'Mary', 'Tammy']));
-console.log(likes([]))
+//console.log(likes(['Jacob', 'Alex', 'Joe', 'Mary', 'Tammy']));
+//console.log(likes([]))
+
+//Write a function that takes a single string as arg. Return an ordered list containing the indexes of all caps.
+
+const capitals = function (word) {
+  let stringArr = word.split("");
+  let newArr = [];
+  for (let i = 0; i < stringArr.length; i++) {
+    if (stringArr[i] === stringArr[i].toUpperCase()) {
+      newArr.push(i);
+    }
+  }
+  return newArr;
+};
+
+console.log(capitals("CodeWarS"));
