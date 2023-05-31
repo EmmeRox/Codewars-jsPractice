@@ -366,4 +366,47 @@ const capitals = function (word) {
   return newArr;
 };
 
-console.log(capitals("CodeWarS"));
+//console.log(capitals("CodeWarS"));
+
+//Your function receives one side of DNA and you need to return the other complementary side
+
+function DNAStrand(dna) {
+  let arr = [];
+  for (let i = 0; i < dna.length; i++) {
+    if (dna[i] === "A") {
+      arr.push("T");
+    } else if (dna[i] === "T") {
+      arr.push("A");
+    } else if (dna[i] === "C") {
+      arr.push("G");
+    } else {
+      arr.push("C");
+    }
+  }
+  return arr.join("");
+}
+
+//console.log(DNAStrand("AAAA"));
+//console.log(DNAStrand("TTCC"));
+//Better solution found on codewars
+function DNAStrand(dna) {
+  //your code here
+  let res = "";
+  for (let i = 0; i < dna.length; i++) {
+    switch (dna[i]) {
+      case "A":
+        res += "T";
+        break;
+      case "T":
+        res += "A";
+        break;
+      case "G":
+        res += "C";
+        break;
+      case "C":
+        res += "G";
+        break;
+    }
+  }
+  return res;
+}
