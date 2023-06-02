@@ -410,3 +410,19 @@ function DNAStrand(dna) {
   }
   return res;
 }
+
+
+//write a function that takes an array of nums and a target and returns the indices of the addends of that target num
+
+function twoSum(num, target) {
+  let indices = [];
+  // num is an array
+  for (let i = 0; i < num.length; i++) {
+    let compli = target - num[i];
+    console.log(compli)
+  }
+  //target is the sum you are trying to reach from nums in array
+  return indices;
+}
+
+console.log(twoSum([1, 2, 3], 4));
