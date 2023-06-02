@@ -411,7 +411,6 @@ function DNAStrand(dna) {
   return res;
 }
 
-
 //write a function that takes an array of nums and a target and returns the indices of the addends of that target num
 
 function twoSum(num, target) {
@@ -419,7 +418,7 @@ function twoSum(num, target) {
   for (let i = 0; i < num.length; i++) {
     for (let j = 1; j < num.length; j++) {
       if (num[i] + num[j] === target) {
-        return [i, j]
+        return [i, j];
       }
     }
   }
@@ -427,4 +426,20 @@ function twoSum(num, target) {
   return indices;
 }
 
-console.log(twoSum([1, 2, 3], 4));
+//console.log(twoSum([1, 2, 3], 4));
+
+//remove dupllicates from a list of integers keeping the last occurrence of each
+
+function solve(arr) {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    console.log(i);
+    if (newArr.lastIndexOf(arr[i])) {
+      newArr.push(arr[i]);
+      console.log(i);
+    }
+  }
+  return newArr;
+}
+
+console.log(solve([3, 4, 4, 3, 6, 3]));
