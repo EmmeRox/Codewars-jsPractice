@@ -432,14 +432,15 @@ function twoSum(num, target) {
 
 function solve(arr) {
   let newArr = [];
-  for (let i = 0; i < arr.length; i++) {
-    console.log(i);
-    if (newArr.lastIndexOf(arr[i])) {
-      newArr.push(arr[i]);
-      console.log(i);
+
+  arr.reverse();
+  for (let i of arr) {
+    if (!newArr.includes(i)) {
+      newArr.push(i);
     }
   }
-  return newArr;
+
+  return newArr.reverse();
 }
 
-console.log(solve([3, 4, 4, 3, 6, 3]));
+//console.log(solve([3, 4, 4, 3, 6, 3]));
