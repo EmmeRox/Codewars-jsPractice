@@ -471,5 +471,23 @@ function isPalindrome(arg) {
   }
 }
 
-console.log(isPalindrome("Abba"));
-console.log(isPalindrome("hello"));
+//console.log(isPalindrome("Abba"));
+//console.log(isPalindrome("hello"));
+
+//An isogram is a word with no reapeating letters. Write a function that determines if isogram or not
+
+function isIsogram(str) {
+  str = str.toLowerCase().split("");
+  for (let i = 0; i < str.length; i++) {
+    let current = str[i];
+    for (let j = 1; j < str.length; j++) {
+      if (current === str[j]) {
+        return false;
+      }
+    }
+    return true;
+  }
+}
+
+console.log(isIsogram("isogram"));
+console.log(isIsogram("abA"));
