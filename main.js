@@ -489,5 +489,22 @@ function isIsogram(str) {
   }
 }
 
-console.log(isIsogram("isogram"));
-console.log(isIsogram("abA"));
+//console.log(isIsogram("isogram"));
+//console.log(isIsogram("abA"));
+
+//Return the middle character of a word. If # of chars is even, return the middle 2
+
+function getMiddle(word) {
+  let middle;
+
+  if (word.length % 2 === 0) {
+    console.log(typeof word);
+    middle = word.slice(word.length / 2 - 1, word.length / 2 + 1);
+  } else {
+    middle = word[Math.floor(word.length / 2)];
+  }
+  return middle;
+}
+
+console.log(getMiddle("test"));
+console.log(getMiddle("testing"));
