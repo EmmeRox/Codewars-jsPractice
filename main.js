@@ -506,5 +506,26 @@ function getMiddle(word) {
   return middle;
 }
 
-console.log(getMiddle("test"));
-console.log(getMiddle("testing"));
+//console.log(getMiddle("test"));
+//console.log(getMiddle("testing"));
+
+//write a function that finds a needle in a haystack
+
+function findNeedle(haystack) {
+  for (i = 0; i < haystack.length; i++) {
+    if (haystack[i] === "needle") {
+      return `found the needle at position ${i}`;
+    }
+  }
+}
+
+let haystack_1 = [
+  "283497238987234",
+  "a dog",
+  "a cat",
+  "some random junk",
+  "a piece of hay",
+  "needle",
+  "something somebody lost a while ago",
+];
+console.log(findNeedle(haystack_1));
