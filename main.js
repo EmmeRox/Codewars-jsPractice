@@ -528,4 +528,17 @@ let haystack_1 = [
   "needle",
   "something somebody lost a while ago",
 ];
-console.log(findNeedle(haystack_1));
+//console.log(findNeedle(haystack_1));
+
+//write a function that accepts an array of 10 integers and returns them in phone number form
+
+function createPhoneNumber(numbers) {
+  let area;
+  let phone;
+  for (let i = 0; i < numbers.length - 7; i++) {
+    area += numbers[i];
+    console.log(area);
+  }
+}
+
+console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
