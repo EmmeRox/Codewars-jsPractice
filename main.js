@@ -541,4 +541,30 @@ function createPhoneNumber(numbers) {
   return `(${areaCode}) ${firstThree} - ${finalFour}`;
 }
 
-console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+//Below does the exact same but cleaner with the Reduce method
+function createPhoneNumber2(numbers) {
+  return numbers.reduce((p, c) => p.replace("x", c), "(xxx) xxx-xxxx");
+}
+
+//console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
+
+//Create a function taht takes in a list of button inputs and returns the final state
+
+function likeOrDislike(buttons) {
+  let likeState = false;
+  let dislikeState = false;
+
+  for (const element of buttons) {
+    if (element === "Like") {
+      likeState = true;
+      dislikeState = false;
+    } else if (element === "Dislike") {
+      dislikeState = true;
+      likeState = false;
+    }
+  }
+
+  return likeState ? "Like" : dislikeState ? "Dislike" : "Nothing";
+}
+
+console.log(likeOrDislike(["Like", "Like"]));
