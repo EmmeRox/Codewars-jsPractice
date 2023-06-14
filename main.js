@@ -555,16 +555,27 @@ function likeOrDislike(buttons) {
   let dislikeState = false;
 
   for (const element of buttons) {
+    //working on new kata
     if (element === "Like") {
-      likeState = true;
-      dislikeState = false;
+      if (likeState) {
+        likeState = false;
+        dislikeState = false;
+      } else {
+        likeState = true;
+        dislikeState = false;
+      }
     } else if (element === "Dislike") {
-      dislikeState = true;
-      likeState = false;
+      if (dislikeState) {
+        dislikeState = false;
+        likeState = false;
+      } else {
+        dislikeState = true;
+        likeState = false;
+      }
     }
   }
 
   return likeState ? "Like" : dislikeState ? "Dislike" : "Nothing";
 }
 
-console.log(likeOrDislike(["Like", "Like"]));
+console.log(likeOrDislike(["Disl1ike", "Like"]));
