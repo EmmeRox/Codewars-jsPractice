@@ -533,12 +533,12 @@ let haystack_1 = [
 //write a function that accepts an array of 10 integers and returns them in phone number form
 
 function createPhoneNumber(numbers) {
-  let area;
-  let phone;
-  for (let i = 0; i < numbers.length - 7; i++) {
-    area += numbers[i];
-    console.log(area);
-  }
+  let areaCode = numbers.slice(0, 3).join("");
+  let firstThree = numbers.slice(3, 6).join("");
+  let finalFour = numbers.slice(6).join("");
+
+  console.log(firstThree);
+  return `(${areaCode}) ${firstThree} - ${finalFour}`;
 }
 
 console.log(createPhoneNumber([1, 2, 3, 4, 5, 6, 7, 8, 9, 0]));
