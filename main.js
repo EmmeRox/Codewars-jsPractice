@@ -578,4 +578,19 @@ function likeOrDislike(buttons) {
   return likeState ? "Like" : dislikeState ? "Dislike" : "Nothing";
 }
 
-console.log(likeOrDislike(["Disl1ike", "Like"]));
+//console.log(likeOrDislike(["Disl1ike", "Like"]));
+
+//knowing m (num of posters), knowing n (num of colors), search for x (num of colors for each poster so that each has a unique color combination). In other words: n choose x = m(1) using the formula m = n! / (x! * (n - x)!)
+
+function checkchoose(posters, colors) { 
+  const colorCombo = 1;
+  const numPosters = posters;
+  
+  for (let i = 2; i <= colors; i++) {
+    colorCombo *= i;
+  }
+  let combinations = colorCombo / (colors - ) //attempting to calculate combination to compare to m but lost as to the unknown variable X
+   if (combinations === m) {
+    return x;
+   } return -1;
+}
