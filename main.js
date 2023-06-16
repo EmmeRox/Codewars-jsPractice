@@ -582,6 +582,8 @@ function likeOrDislike(buttons) {
 
 //knowing m (num of posters), knowing n (num of colors), search for x (num of colors for each poster so that each has a unique color combination). In other words: n choose x = m(1) using the formula m = n! / (x! * (n - x)!)
 
+function factorial(); //separate the bottom function into two functions. first one being the one that does the math of factorial and then calling the function inside the checkchoose function, using it in lieu of the (!) from the original problem
+
 function checkchoose(m, n) { 
   let colorCombo = 1;
   
