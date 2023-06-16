@@ -582,30 +582,25 @@ function likeOrDislike(buttons) {
 
 //knowing m (num of posters), knowing n (num of colors), search for x (num of colors for each poster so that each has a unique color combination). In other words: n choose x = m(1) using the formula m = n! / (x! * (n - x)!)
 
-function factorial(); //separate the bottom function into two functions. first one being the one that does the math of factorial and then calling the function inside the checkchoose function, using it in lieu of the (!) from the original problem
+function factorial(num) {
+ for (let i = 1; i <= num; i++) {
+ num *= num;
+return num;
+}
+}
+; //separate the bottom function into two functions. first one being the one that does the math of factorial and then calling the function inside the checkchoose function, using it in lieu of the (!) from the original problem
 
 function checkchoose(m, n) { 
   let colorCombo = 1;
   
   for (let i = 0; i <= m; i++) {
-    colorCombo *= n - i;
+    colorCombo = factorial(n) / (factorial (i) * factorial(n - i);
   }
 
-  let x = 1;
-  while (x <= n) {
-  let combinations = 1; //attempting to calculate combination to compare to m but lost as to the unknown variable X
-  let availableColors = n;
-
-  for (let i = 0; i < m; i++) {
-    combinations *= availableColors;
-    availableColors--;
+  if (m === colorCombo) {
+    return ;
   }
 
-  if (combinations === colorCombo) {
-    return x;
-  }
-
-  x++
 }
 
 return -1;
