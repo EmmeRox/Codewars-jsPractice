@@ -582,15 +582,29 @@ function likeOrDislike(buttons) {
 
 //knowing m (num of posters), knowing n (num of colors), search for x (num of colors for each poster so that each has a unique color combination). In other words: n choose x = m(1) using the formula m = n! / (x! * (n - x)!)
 
-function checkchoose(posters, colors) { 
-  const colorCombo = 1;
-  const numPosters = posters;
-  
-  for (let i = 2; i <= colors; i++) {
-    colorCombo *= i;
+function nFactorial(n) {
+  if (n === 1 || n === 0) {
+    return 1;
   }
-  let combinations = colorCombo / (colors - ) //attempting to calculate combination to compare to m but lost as to the unknown variable X
-   if (combinations === m) {
-    return x;
-   } return -1;
+
+  return n * nFactorial(n - 1);
+}
+
+function checkchoose(numCombinations, numElementsToChoose) {
+  for (let x = 0; x < numElementsToChoose; x++) {
+    if (numCombinations === binomialCoefficient(numElementsToChoose, x)) {
+      return x;
+    }
+  }
+
+  return -1; // no possible answer
+}
+
+function binomialCoefficient(numElements, numElementsChosen) {
+  let numCombinations =
+    nFactorial(numElements) /
+    (nFactorial(numElementsChosen) *
+      nFactorial(numElements - numElementsChosen));
+
+  return numCombinations;
 }
