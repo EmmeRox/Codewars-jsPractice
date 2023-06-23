@@ -582,6 +582,7 @@ function likeOrDislike(buttons) {
 
 //knowing m (num of posters), knowing n (num of colors), search for x (num of colors for each poster so that each has a unique color combination). In other words: n choose x = m(1) using the formula m = n! / (x! * (n - x)!)
 
+<<<<<<< HEAD
 function nFactorial(n) {
   if (n === 1 || n === 0) {
     return 1;
@@ -607,4 +608,29 @@ function binomialCoefficient(numElements, numElementsChosen) {
       nFactorial(numElements - numElementsChosen));
 
   return numCombinations;
+=======
+function factorial(num) {
+ for (let i = 1; i <= num; i++) {
+ num *= num;
+return num;
+>>>>>>> 36c5d6f6f68ff0a66d85df8634e8767ae61ba14e
 }
+}
+; //separate the bottom function into two functions. first one being the one that does the math of factorial and then calling the function inside the checkchoose function, using it in lieu of the (!) from the original problem
+
+function checkchoose(m, n) { 
+  let colorCombo = 1;
+  
+  for (let i = 0; i <= m; i++) {
+    colorCombo = factorial(n) / (factorial (i) * factorial(n - i);
+  }
+
+  if (m === colorCombo) {
+    return ;
+  }
+
+}
+
+return -1;
+}
+console.log(checkchoose(6, 4));
