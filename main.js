@@ -610,3 +610,8 @@ function binomialCoefficient(numElements, numElementsChosen) {
 }
 
 // worked on solving the above with peers
+
+//Below is back to basics and a refresh
+//implement a function that converts boolean to its string representation
+
+const booleanToString = (bool) => bool.toString();
