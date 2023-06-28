@@ -615,3 +615,14 @@ function binomialCoefficient(numElements, numElementsChosen) {
 //implement a function that converts boolean to its string representation
 
 const booleanToString = (bool) => bool.toString();
+
+// Examples include accum('abcd') -> 'A-Bb=Ccc-Dddd'
+
+function accum(string) {
+  let newString = "";
+  for (let i = 0; 0 < string.length; i++) {
+    //working on new codewars
+  }
+}
+
+console.log(accum("ZpglnRxqenU"));
