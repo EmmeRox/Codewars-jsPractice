@@ -631,8 +631,7 @@ function accum(string) {
 
 function arrayDiff(a, b) {
   //if element b in array a, remove and return modified a
-  let newArr = a.filter((element) => element !== b.includes(element));
-  return newArr;
+  return a.filter((element) => !b.includes(element));
 }
 
 console.log(arrayDiff([1, 2], [1]));
