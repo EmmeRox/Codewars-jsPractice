@@ -625,4 +625,14 @@ function accum(string) {
   }
 }
 
-console.log(accum("ZpglnRxqenU"));
+//console.log(accum("ZpglnRxqenU"));
+
+//implement a difference function, which subtracts one list fro another and returns the result
+
+function arrayDiff(a, b) {
+  //if element b in array a, remove and return modified a
+  let newArr = a.filter((element) => element !== b.includes(element));
+  return newArr;
+}
+
+console.log(arrayDiff([1, 2], [1]));
